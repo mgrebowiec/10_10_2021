@@ -1,6 +1,6 @@
 package pl.sda.mg.zadanie9;
 
-public class Point2D {
+public class Point2D implements Movable {
     private double x;
     private double y;
 
@@ -15,5 +15,16 @@ public class Point2D {
 
     public double getX() {
         return x;
+    }
+
+    @Override
+    public void move(MoveDirection moveDirection) {
+        this.x = x + moveDirection.getX();
+        this.y = y + moveDirection.getY();
+    }
+
+    @Override
+    public String toString() {
+        return "[x: " + x + ", y: " + y + "]";
     }
 }

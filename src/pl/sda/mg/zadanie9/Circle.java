@@ -2,7 +2,7 @@ package pl.sda.mg.zadanie9;
 
 import java.util.List;
 
-public class Circle {
+public class Circle implements Movable {
     private Point2D center;
     private Point2D point;
 
@@ -37,5 +37,27 @@ public class Circle {
         // czyli musicie do nich dodać wartości reprezentowane przez punkt center
 
         return null;
+    }
+
+    @Override
+    public void move(MoveDirection moveDirection) {
+        center.move(moveDirection);
+        point.move(moveDirection);
+
+
+        // sposób na okrętkę z dublowaniem kodu
+//        double newX = center.getX() + moveDirection.getX();
+//        double newY = center.getY() + moveDirection.getY();
+//        center = new Point2D(newX, newY);
+//
+//        newX = point.getX() + moveDirection.getX();
+//        newY = point.getY() + moveDirection.getY();
+//        point = new Point2D(newX, newY);
+
+    }
+
+    @Override
+    public String toString() {
+        return "center: " + center + "\n point: " + point + "\n";
     }
 }

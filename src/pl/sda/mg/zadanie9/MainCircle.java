@@ -7,5 +7,13 @@ public class MainCircle {
         System.out.println("Radius: " + circle.getRadius());
         System.out.println("Perimeter: " + circle.getPerimeter());
         System.out.println("Area: " + circle.getArea());
+        System.out.println(circle);
+
+        System.out.println("Przesuwamy kolo...");
+        circle.move(new MoveDirection(1,1));
+        System.out.println("Radius: " + circle.getRadius());
+        System.out.println("Perimeter: " + circle.getPerimeter());
+        System.out.println("Area: " + circle.getArea());
+        System.out.println(circle);
     }
 }
