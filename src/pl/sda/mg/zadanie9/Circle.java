@@ -2,7 +2,7 @@ package pl.sda.mg.zadanie9;
 
 import java.util.List;
 
-public class Circle implements Movable {
+public class Circle implements Movable, Resizable {
     private Point2D center;
     private Point2D point;
 
@@ -59,5 +59,12 @@ public class Circle implements Movable {
     @Override
     public String toString() {
         return "center: " + center + "\n point: " + point + "\n";
+    }
+
+    @Override
+    public void resize(double resizeFactor) {
+        double newx = point.getX() * resizeFactor;
+        double newY = point.getY() * resizeFactor;
+        point = new Point2D(newx, newY);
     }
 }

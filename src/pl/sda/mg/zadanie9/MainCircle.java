@@ -15,5 +15,13 @@ public class MainCircle {
         System.out.println("Perimeter: " + circle.getPerimeter());
         System.out.println("Area: " + circle.getArea());
         System.out.println(circle);
+
+
+        System.out.println("Zwiekszamy kolo ...");
+        circle.resize(2);
+        System.out.println("Radius: " + circle.getRadius());
+        System.out.println("Perimeter: " + circle.getPerimeter());
+        System.out.println("Area: " + circle.getArea());
+        System.out.println(circle);
     }
 }
